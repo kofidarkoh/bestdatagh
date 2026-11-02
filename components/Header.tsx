@@ -36,13 +36,13 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/fastdata-logo.png"
-            alt="Fastdata"
+            src="/logo.png"
+            alt="Bestdatagh"
             width={28}
             height={28}
             className="h-7 w-7 object-contain"
           />
-          <span className="text-lg font-bold text-yellow-500">FASTDATA</span>
+          <span className="text-lg font-bold text-yellow-500">Bestdatagh</span>
         </Link>
         <div className="flex items-center gap-1.5">
           <button

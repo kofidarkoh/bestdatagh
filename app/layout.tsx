@@ -6,8 +6,8 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-geist", display: "sw
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono", display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fastdata.vercel.app"),
-  title: "Fastdata — Buy Cheap Data Bundles in Ghana",
+  metadataBase: new URL("https://bestdatagh.vercel.app"),
+  title: "Bestdatagh — Buy Cheap Data Bundles in Ghana",
   description:
     "Ghana's affordable data bundles. Buy MTN and Telecel data instantly from GH₵5. Non-expiry bundles, no account needed, pay via MoMo with Paystack. Fast delivery.",
   keywords: [
@@ -21,28 +21,31 @@ export const metadata: Metadata = {
     "mobile money data Ghana",
     "affordable data bundles",
   ],
-  applicationName: "Fastdata",
-  authors: [{ name: "Fastdata" }],
-  creator: "Fastdata",
-  publisher: "Fastdata",
+  applicationName: "Bestdatagh",
+  authors: [{ name: "Bestdatagh" }],
+  creator: "Bestdatagh",
+  publisher: "Bestdatagh",
   robots: { index: true, follow: true, "max-image-preview": "large" },
   openGraph: {
     type: "website",
     locale: "en_GH",
-    url: "https://fastdata.vercel.app",
-    siteName: "Fastdata",
-    title: "Fastdata — Buy Cheap Data Bundles in Ghana",
+    url: "https://bestdatagh.vercel.app",
+    siteName: "Bestdatagh",
+    title: "Bestdatagh — Buy Cheap Data Bundles in Ghana",
     description:
       "Ghana's affordable data bundles. Buy MTN and Telecel data instantly. Non-expiry, no account needed, pay via MoMo.",
-    images: [{ url: "/fastdata-logo.png", width: 512, height: 512, alt: "Fastdata" }],
+    images: [{ url: "/logo.png", width: 512, height: 512, alt: "Bestdatagh" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fastdata — Buy Cheap Data Bundles in Ghana",
+    title: "Bestdatagh — Buy Cheap Data Bundles in Ghana",
     description: "Ghana's affordable data bundles. Buy MTN and Telecel data instantly.",
-    images: ["/fastdata-logo.png"],
+    images: ["/logo.png"],
   },
-  icons: { icon: "/fastdata-logo.png", apple: "/fastdata-logo.png" },
+  icons: { icon: "/logo.png", apple: "/logo.png" },
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export const viewport = {
@@ -59,7 +62,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="min-h-screen bg-[var(--bg)] text-[var(--text)]">{children}</body>
+      <body className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Bestdatagh",
+              url: "https://bestdatagh.vercel.app",
+              logo: "https://bestdatagh.vercel.app/logo.png",
+              description: "Ghana data bundles and SIM services. Pay securely with Paystack, delivered fast.",
+              areaServed: { "@type": "Country", name: "Ghana" },
+            }),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
