@@ -6,8 +6,8 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-geist", display: "sw
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono", display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bestdatagh.vercel.app"),
-  title: "Bestdatagh — Buy Cheap Data Bundles in Ghana",
+  metadataBase: new URL("https://data4you.vercel.app"),
+  title: "data4you — Buy Cheap Data Bundles in Ghana",
   description:
     "Ghana's affordable data bundles. Buy MTN and Telecel data instantly from GH₵5. Non-expiry bundles, no account needed, pay via MoMo with Paystack. Fast delivery.",
   keywords: [
@@ -21,28 +21,28 @@ export const metadata: Metadata = {
     "mobile money data Ghana",
     "affordable data bundles",
   ],
-  applicationName: "Bestdatagh",
-  authors: [{ name: "Bestdatagh" }],
-  creator: "Bestdatagh",
-  publisher: "Bestdatagh",
+  applicationName: "data4you",
+  authors: [{ name: "data4you" }],
+  creator: "data4you",
+  publisher: "data4you",
   robots: { index: true, follow: true, "max-image-preview": "large" },
   openGraph: {
     type: "website",
     locale: "en_GH",
-    url: "https://bestdatagh.vercel.app",
-    siteName: "Bestdatagh",
-    title: "Bestdatagh — Buy Cheap Data Bundles in Ghana",
+    url: "https://data4you.vercel.app",
+    siteName: "data4you",
+    title: "data4you — Buy Cheap Data Bundles in Ghana",
     description:
       "Ghana's affordable data bundles. Buy MTN and Telecel data instantly. Non-expiry, no account needed, pay via MoMo.",
-    images: [{ url: "/logo.png", width: 512, height: 512, alt: "Bestdatagh" }],
+
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bestdatagh — Buy Cheap Data Bundles in Ghana",
+    title: "data4you — Buy Cheap Data Bundles in Ghana",
     description: "Ghana's affordable data bundles. Buy MTN and Telecel data instantly.",
-    images: ["/logo.png"],
+
   },
-  icons: { icon: "/logo.png", apple: "/logo.png" },
+
   verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
     ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
     : undefined,
@@ -69,9 +69,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Bestdatagh",
-              url: "https://bestdatagh.vercel.app",
-              logo: "https://bestdatagh.vercel.app/logo.png",
+              name: "data4you",
+              url: "https://data4you.vercel.app",
+
               description: "Ghana data bundles and SIM services. Pay securely with Paystack, delivered fast.",
               areaServed: { "@type": "Country", name: "Ghana" },
             }),

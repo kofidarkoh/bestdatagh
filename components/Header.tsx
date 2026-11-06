@@ -2,7 +2,6 @@
 
 import { useSyncExternalStore } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 function subscribeTheme(cb: () => void) {
   if (typeof document === "undefined") return () => {};
@@ -35,14 +34,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-gray-200 bg-white transition-colors dark:border-gray-800 dark:bg-gray-900">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="/logo.png"
-            alt="Bestdatagh"
-            width={28}
-            height={28}
-            className="h-7 w-7 object-contain"
-          />
-          <span className="text-lg font-bold text-yellow-500">Bestdatagh</span>
+          <span className="text-lg font-bold text-yellow-500">data4you</span>
         </Link>
         <div className="flex items-center gap-1.5">
           <button
