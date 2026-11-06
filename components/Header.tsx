@@ -34,7 +34,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-gray-200 bg-white transition-colors dark:border-gray-800 dark:bg-gray-900">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-lg font-bold text-yellow-500">data4you</span>
+          <span className="text-lg font-bold text-yellow-500">dataforyou</span>
         </Link>
         <div className="flex items-center gap-1.5">
           <button
